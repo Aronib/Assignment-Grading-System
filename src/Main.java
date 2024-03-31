@@ -1,3 +1,9 @@
+import oops.abstraction.Akash;
+import oops.abstraction.Student;
+import oops.encapsulation.Payment;
+import oops.inheritance.AcademicBooks;
+import oops.polymorphism.DepartmentHead;
+
 import java.util.Scanner;
 
 public class Main {
@@ -39,6 +45,15 @@ public class Main {
         }
     }
 
+    String sub = "Introduction to Computer Science";
+    public static String title = "Introduction to Computer Science";
+    public static String author = "Author";
+    public static int numOP = 342;
+
+    public static String id = "1122334455";
+    public static float amount = 75000;
+    public static String bName = "MD. Mahady";
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter your marks for 5 subjects:");
@@ -53,6 +68,46 @@ public class Main {
         forLoop.gradingForLoop();
         doWhileLoop.gradeDoWhile();
         whileLoop.gradeWhile();
+
+        // Abstraction
+
+        System.out.println("----------Abstraction------------\n");
+
+        Student student = new Akash();
+        student.university();
+        student.name();
+        student.result();
+
+        //Polymorphism
+
+        System.out.println("----------Polymorphism------------\n");
+
+        DepartmentHead A = new DepartmentHead();
+
+        A.details();
+        A.duty_b();
+
+        //Inheritance
+
+        System.out.println("----------Inheritance------------\n");
+
+        AcademicBooks book = new AcademicBooks();
+        book.provideInformation();
+        book.displayInfo(title,author, numOP);
+
+        System.out.println("----------Encapsulation------------\n");
+
+
+
+        Payment payment = new Payment();
+        payment.setAmount(66587.9F);
+        payment.setAccID(1199);
+        payment.setBeneficiaryName("MD Mahady");
+
+            System.out.println("Your payment account ID is: " + payment.getAccID());
+            System.out.println("Your paid amount is: " + payment.getAmount());
+            System.out.println("Name of the beneficiary is: " + payment.getBeneficiaryName());
+
 
     }
 }
